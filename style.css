@@ -236,7 +236,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .slideshow-container img{
-       height: 400px;
+       height: 300px;
        object-fit:inherit;
 
     }
