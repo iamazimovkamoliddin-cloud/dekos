@@ -125,7 +125,90 @@
         dots[slideIndex-1].className += " active";
         }
 </script>
-<!-- Banner js qismi Tugashi -->
+<!-- Banner js qismi Tugashi_____________________________________________ -->
+
+
+
+<!-- Slider boshlanishi -->
+<div class="slider" id="slider">
+    <div class="slide">
+      <img src="icons/owl.png" alt="">
+      <h4>29/08Кейс</h4>
+      <p>ARNIKA обнимает: новогодний кейс с теплой душой</p>
+    </div>
+    <div class="slide">
+      <img src="icons/note.png" alt="">
+      <h4>20/08Кейс</h4>
+      <p>Мерч для стратегической сессии Illan Communications</p>
+    </div>
+    <div class="slide">
+      <img src="icons/audiobook.png" alt="">
+      <h4>13/08На заказ</h4>
+      <p>5 Если в мире чего-то не хватает, это можно... напечатать!/p>
+    </div>
+     <div class="slide">
+      <img src="icons/owl.png" alt="">
+      <h4>29/08Кейс</h4>
+      <p>ARNIKA обнимает: новогодний кейс с теплой душой</p>
+    </div>
+    <div class="slide">
+      <img src="icons/note.png" alt="">
+      <h4>20/08Кейс</h4>
+      <p>Мерч для стратегической сессии Illan Communications</p>
+    </div>
+    <div class="slide">
+      <img src="icons/audiobook.png" alt="">
+      <h4>13/08На заказ</h4>
+      <p>5 Если в мире чего-то не хватает, это можно... напечатать!/p>
+    </div>
+     <div class="slide">
+      <img src="icons/owl.png" alt="">
+      <h4>29/08Кейс</h4>
+      <p>ARNIKA обнимает: новогодний кейс с теплой душой</p>
+    </div>
+    <div class="slide">
+      <img src="icons/note.png" alt="">
+      <h4>20/08Кейс</h4>
+      <p>Мерч для стратегической сессии Illan Communications</p>
+    </div>
+    <div class="slide">
+      <img src="icons/audiobook.png" alt="">
+      <h4>13/08На заказ</h4>
+      <p>5 Если в мире чего-то не хватает, это можно... напечатать!/p>
+    </div>
+    
+</div>
+
+
+  <script>
+    const slider = document.getElementById('slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX);
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  </script
+
 
 </body>
 </html>

@@ -93,7 +93,7 @@ body {
 .profile img{
         width: 27px;
         height: 27px;
-        padding-left: 15px;
+        padding-left: 8px;
 }
 
 
@@ -274,8 +274,8 @@ body {
     padding-left: 40px;
 }
 
-    .navbar img{
-    margin-right: 40px;
+    .profile img{
+    margin-right: 20px;
 }
 
 }
@@ -283,3 +283,61 @@ body {
 
 
  /* Slideshow container tugadi ________________________________________________________________*/
+
+
+
+
+  /* Slider container boshlandi ________________________________________________________________*/
+
+
+ .slider {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      cursor: grab;
+      margin-top: 10px;
+      background: #fff;
+      scrollbar-width: none; /* Firefox */
+      margin-bottom: 200px;
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    .slider:active {
+      cursor: grabbing;
+    }
+
+    .slide {
+      flex: 0 0 350px; /* kengligi doim 300px */
+      height: 170px;
+      background: #F2F2F2;
+      padding: 20px;
+      border-right: 1px solid #8f8f8f2f;
+      box-sizing: border-box;
+      color: #607079;
+      user-select: none; /* matn belgilashni bloklash */
+    }
+
+    .slide:hover{
+        background-color: #fafafa;
+    }
+
+    .slide img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .slide h4 {
+      margin: 0 0 10px 0;
+      font-weight: 500;
+      font-size: 18px;
+      color: #444f55;
+    }
+
+    .slide p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 100;
+    }
