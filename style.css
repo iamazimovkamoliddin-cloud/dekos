@@ -15,7 +15,6 @@ body {
 
 .navbar img{
     width: 110px;
-    float: left;
     margin-right: 70px;
 }
 
@@ -236,7 +235,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .slideshow-container img{
-       height: 300px;
+       height: 450px;
        object-fit:inherit;
 
     }
@@ -250,7 +249,7 @@ body {
      }
 
      .hero-text h1 {
-        font-size: 26px;
+        font-size: 22px;
     } 
          .hero-text p {
         font-size: 15px;
@@ -260,6 +259,14 @@ body {
     .btn{
           font-size: 12px;
     }
+
+    .navbar {
+    padding-left: 40px;
+}
+
+    .navbar img{
+    margin-right: 40px;
+}
 
 }
 
