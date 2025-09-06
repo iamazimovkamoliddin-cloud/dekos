@@ -98,6 +98,11 @@ body {
 
 
 @media screen and (max-width: 1000px) {
+
+    .navbar .logo{
+        width: 90px;
+    }
+
     .navbar a{
         display: none;
     }
@@ -107,12 +112,17 @@ body {
     }
 
     .navbar p{
-        display: none;
+        font-size: 14px;
     }
 
     .profile{
         right: 0%;
     }
+
+    .profile img{
+        width: 25px;
+        height: 25px;
+}
 
 }
 
