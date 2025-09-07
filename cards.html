@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu Grid</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 30px;
+  margin: 0;
+}
+
+/* Container: flex wrap + gap */
+.dropdown-containerMia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Dropdown: maksimal 5 blok bir qatorda */
+.dropdownMia {
+  flex: 1 1 calc(20% - 20px); /* 5 blok = 100% / 5 = 20% minus gap */
+  max-width: 250px; /* maksimal kenglik */
+  min-width: 150px; /* minimal kenglik */
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  font-size: 14px;
+
+}
+
+/* Linklar va button */
+.dropbtnMia, .dropbtnMia a, .dropdown-contentMia a {
+  background: #ffffff;
+  color: #555;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  transition: color 0.3s;
+}
+
+
+.dropbtnMia {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+}
+
+.dropbtnMia a {
+  padding: 5px 36px;
+  border-radius: 10px;
+}
+
+.dropbtnMia:hover {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.dropdown-contentMia {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-contentMia a {
+  padding: 5px 36px;
+}
+
+/* Hover qilganda dropdown ochiladi */
+.dropdownMia:hover .dropdown-contentMia {
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdownMia:hover .dropbtnMia {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+
+/* Icon va title */
+.category-iconMia {
+  font-size: 24px;
+  color: #ff4d4f;
+  padding: 20px 36px 26px;
+  transition: color 0.3s;
+}
+
+.category-titleMia {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 0 10px 36px;
+  transition: color 0.3s;
+}
+
+/* Hover rang icon va title bilan birga linklar ham */
+.dropdownMia:hover .category-iconMia,
+.dropdownMia:hover .category-titleMia,
+.dropdownMia a:hover {
+  color: #ff4d4f;
+}
+</style>
+</head>
+<body>
+
+<h2>Dropdown Menu Grid</h2>
+<p>Har bir qatorda maksimal 5 blok, qolganlari avtomatik pastga tushadi.</p>
+
+<div class="dropdown-containerMia">
+  <!-- 1-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-tshirt"></i></span>
+      <div class="category-titleMia">Одежда</div>
+      <a href="#">Футболки</a>
+      <a href="#">Кепки</a>
+      <a href="#">Панамы</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Толстовки</a>
+      <a href="#">Кружки</a>
+      <a href="#">Термокружки</a>
+    </div>
+  </div>
+
+  <!-- 2-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-shoe-prints"></i></span>
+      <div class="category-titleMia">Обувь</div>
+      <a href="#">Кроссовки</a>
+      <a href="#">Туфли</a>
+      <a href="#">Сандали</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Ботинки</a>
+      <a href="#">Сапоги</a>
+      <a href="#">Кеды</a>
+    </div>
+  </div>
+
+  <!-- 3-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-mug-hot"></i></span>
+      <div class="category-titleMia">Посуда</div>
+      <a href="#">Кружки</a>
+      <a href="#">Термокружки</a>
+      <a href="#">Тарелки</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Ложки</a>
+      <a href="#">Вилки</a>
+      <a href="#">Ножи</a>
+    </div>
+  </div>
+
+  <!-- 4-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-hat-cowboy"></i></span>
+      <div class="category-titleMia">Аксессуары</div>
+      <a href="#">Шляпы</a>
+      <a href="#">Сумки</a>
+      <a href="#">Ремни</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Очки</a>
+      <a href="#">Перчатки</a>
+      <a href="#">Шарфы</a>
+    </div>
+  </div>
+
+  <!-- 5-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-book"></i></span>
+      <div class="category-titleMia">Книги</div>
+      <a href="#">Романы</a>
+      <a href="#">Комиксы</a>
+      <a href="#">Учебники</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Словари</a>
+      <a href="#">Биографии</a>
+      <a href="#">Энциклопедии</a>
+    </div>
+  </div>
+
+  <!-- 6-blok: avtomatik pastga tushadi -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-gamepad"></i></span>
+      <div class="category-titleMia">Игры</div>
+      <a href="#">Настольные</a>
+      <a href="#">Компьютерные</a>
+      <a href="#">Карточные</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Пазлы</a>
+      <a href="#">Конструкторы</a>
+      <a href="#">Головоломки</a>
+    </div>
+  </div>
+
+   <!-- 3-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-mug-hot"></i></span>
+      <div class="category-titleMia">Посуда</div>
+      <a href="#">Кружки</a>
+      <a href="#">Термокружки</a>
+      <a href="#">Тарелки</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Ложки</a>
+      <a href="#">Вилки</a>
+      <a href="#">Ножи</a>
+    </div>
+  </div>
+
+  <!-- 4-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-hat-cowboy"></i></span>
+      <div class="category-titleMia">Аксессуары</div>
+      <a href="#">Шляпы</a>
+      <a href="#">Сумки</a>
+      <a href="#">Ремни</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Очки</a>
+      <a href="#">Перчатки</a>
+      <a href="#">Шарфы</a>
+    </div>
+  </div>
+
+  <!-- 5-blok -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-book"></i></span>
+      <div class="category-titleMia">Книги</div>
+      <a href="#">Романы</a>
+      <a href="#">Комиксы</a>
+      <a href="#">Учебники</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Словари</a>
+      <a href="#">Биографии</a>
+      <a href="#">Энциклопедии</a>
+    </div>
+  </div>
+
+  <!-- 6-blok: avtomatik pastga tushadi -->
+  <div class="dropdownMia">
+    <div class="dropbtnMia">
+      <span class="category-iconMia"><i class="fas fa-gamepad"></i></span>
+      <div class="category-titleMia">Игры</div>
+      <a href="#">Настольные</a>
+      <a href="#">Компьютерные</a>
+      <a href="#">Карточные</a>
+    </div>
+    <div class="dropdown-contentMia">
+      <a href="#">Пазлы</a>
+      <a href="#">Конструкторы</a>
+      <a href="#">Головоломки</a>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>

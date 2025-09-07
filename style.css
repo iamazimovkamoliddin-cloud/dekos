@@ -1,6 +1,7 @@
 body {
   font-family:Inter, sans-serif;
-  margin:0
+  margin:0;
+  background: #f6f6f6;
 }
 
 /* Menu qismi boshlanishi */
@@ -140,7 +141,7 @@ body {
 }
 
 .slideshow-container img{
-    height: 300px;
+    height: 280px;
     object-fit: cover;
     object-position: 50% 100%;
 }
@@ -210,13 +211,22 @@ body {
   background: #c30024;
 }
 
+.dots{
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: center; /* gorizontal markaz */
+  align-items: center; 
+}
+
 .dot {
   cursor: pointer;
-  height: 6px;
+  height: 8px;
   width: 50px;
   margin-right: 5px;
   display: inline-block;
-  background-color: #bbbbbb3f;
+  background-color: #bbbbbb;
   transition: background-color 0.6s ease;
 }
 
@@ -287,6 +297,82 @@ body {
 
 
 
+ /* 
+
+ .sub-header {
+  background: #ffffff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6vw;
+}
+
+.sub-left, .sub-center, .sub-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-left a{
+    margin-right: 25px;
+    margin-left: 8px;
+}
+
+.sub-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.sub-left a,
+.sub-center a,
+.sub-right a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #686868;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sub-left a:hover,
+.sub-center a:hover,
+.sub-right a:hover {
+  color: #e4002b;
+}
+
+.sub-right {
+  gap: 20px;
+}
+
+.sub-right .phone {
+  color: #959595;
+}
+
+.sub-right .cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6e6e6e;
+  text-decoration: none;
+}
+
+.sub-right .cart img {
+  width: 25px;
+  height: 25px;
+}
+
+.sub-left img {
+  width: 30px;
+  height: 30px;
+
+}
+
+*/
+
+
+
+
+
   /* Slider container boshlandi ________________________________________________________________*/
 
 
@@ -295,10 +381,8 @@ body {
       overflow-x: auto;
       overflow-y: hidden;
       cursor: grab;
-      margin-top: 10px;
       background: #fff;
       scrollbar-width: none; /* Firefox */
-      margin-bottom: 200px;
     }
 
     .slider::-webkit-scrollbar {
@@ -330,7 +414,7 @@ body {
     }
 
     .slide h4 {
-      margin: 0 0 10px 0;
+
       font-weight: 500;
       font-size: 18px;
       color: #444f55;
@@ -341,3 +425,22 @@ body {
       font-size: 14px;
       font-weight: 100;
     }
+
+
+    
+@media screen and (max-width: 900px) {
+
+      .slide {
+      flex: 0 0 300px; /* kengligi doim 300px */
+      height: 170px;
+    }
+
+}
+
+
+
+
+
+
+
+

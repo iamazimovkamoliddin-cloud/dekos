@@ -1,0 +1,96 @@
+/* Container: flex wrap + gap */
+.dropdown-containerMia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 200px;
+}
+
+/* Dropdown: maksimal 5 blok bir qatorda */
+.dropdownMia {
+  flex: 1 1 calc(20% - 20px); /* 5 blok = 100% / 5 = 20% minus gap */
+  max-width: 250px; /* maksimal kenglik */
+  min-width: 150px; /* minimal kenglik */
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  font-size: 14px;
+
+}
+
+/* Linklar va button */
+.dropbtnMia, .dropbtnMia a, .dropdown-contentMia a {
+  background: #ffffff;
+  color: #555;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  transition: color 0.3s;
+}
+
+
+.dropbtnMia {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+}
+
+.dropbtnMia a {
+  padding: 5px 36px;
+  border-radius: 10px;
+}
+
+.dropbtnMia:hover {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.dropdown-contentMia {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-contentMia a {
+  padding: 5px 36px;
+}
+
+/* Hover qilganda dropdown ochiladi */
+.dropdownMia:hover .dropdown-contentMia {
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdownMia:hover .dropbtnMia {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+
+/* Icon va title */
+.category-iconMia {
+  font-size: 24px;
+  color: #ff4d4f;
+  padding: 20px 36px 26px;
+  transition: color 0.3s;
+}
+
+.category-titleMia {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 0 10px 36px;
+  transition: color 0.3s;
+}
+
+/* Hover rang icon va title bilan birga linklar ham */
+.dropdownMia:hover .category-iconMia,
+.dropdownMia:hover .category-titleMia,
+.dropdownMia a:hover {
+  color: #ff4d4f;
+}
