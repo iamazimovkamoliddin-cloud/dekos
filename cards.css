@@ -104,6 +104,7 @@
         cursor: default;
         width: 100%;
         margin-bottom: 10px;
+        margin-left: -40px;
         display: flex;
         flex-direction: row;
         align-items: center;   /* ikon + matn vertikal markazda */
@@ -112,7 +113,7 @@
 
     .category-titleMia {
         position: static;
-        font-size: 16px;
+        font-size: 18px;
         color: #333;
     }
 
@@ -134,7 +135,7 @@
         display: flex;
         align-items: center;      /* ikon vertical markazda */
         justify-content: center;  /* ikon horizontal markazda */
-        font-size: 34px;          /* hamma ikon bir xil hajmda */
+        font-size: 40px;          /* hamma ikon bir xil hajmda */
         color: #ff4d4f;
     }
 
@@ -147,4 +148,10 @@
     .dropdownMia:hover .category-titleMia {
         color: #333;
     }
+
+
+    .dropdownMia:hover .dropbtnMia {
+        box-shadow: none;
+}
+
 }
