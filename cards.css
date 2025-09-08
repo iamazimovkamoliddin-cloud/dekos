@@ -96,37 +96,55 @@
 
 @media screen and (max-width: 800px) {
 
-    .dropbtnMia a{
-          display: none;
-    }
-    
-    .dropbtnMia {
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction:inherit;
-    align-items: center;
-    justify-content:left;
-    
-    }
-
-    .category-titleMia {
-   position: absolute;
-   left: 15%;
-    }
-
-    .dropdown-contentMia a{
+    .dropbtnMia a {
         display: none;
     }
 
-    .dropdownMia{
-        width: 100px;
+    .dropbtnMia {
+        cursor: default;
+        width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;   /* ikon + matn vertikal markazda */
+        box-shadow: none;
     }
 
+    .category-titleMia {
+        position: static;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .dropdown-contentMia {
+        display: none !important;
+    }
+
+    .dropdownMia {
+        width: 100%;
+        display: block;
+        float: none;
+        margin: 0;
+    }
+
+    /* ICON birinchi ikonga qarab tenglashtirish */
     .category-iconMia {
-     padding: 0px;
-     font-size: 34px;
-     margin-left: -10px;
+        width: 40px;              /* hamma ikon bir xil joy oladi */
+        height: 40px;             /* balandlikni birinchi ikon bo‘yicha tanladingiz */
+        display: flex;
+        align-items: center;      /* ikon vertical markazda */
+        justify-content: center;  /* ikon horizontal markazda */
+        font-size: 34px;          /* hamma ikon bir xil hajmda */
+        color: #ff4d4f;
+    }
+
+    .category-titleMia {
+        padding-left: 0px;
 }
+
+    /* Hover rang effekti */
+    .dropdownMia:hover .category-iconMia,
+    .dropdownMia:hover .category-titleMia {
+        color: #333;
+    }
 }
