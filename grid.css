@@ -1,0 +1,166 @@
+.project111-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-top: 100px;
+}
+
+.project111-card {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  align-items: flex-start;
+}
+
+.project111-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.project111-text {
+  max-width: 350px;
+}
+
+.project111-text h2 {
+  font-size: 48px;
+  margin: 0;
+  color: #333;
+}
+
+.project111-text h3 {
+  font-size: 20px;
+  margin: 5px 0 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+.project111-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+/* 📱 Telefon (≤600px) */
+@media (max-width: 600px) {
+  .project111-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project111-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .project111-card img {
+    width: 80%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto 12px;
+  }
+
+  .project111-text {
+    max-width: 95%;
+  }
+
+  .project111-text h2 {
+    font-size: 24px;
+  }
+
+  .project111-text h3 {
+    font-size: 14px;
+  }
+
+  .project111-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* 📲 Planshet (601px – 1023px) */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .project111-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .project111-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .project111-card img {
+    width: 85%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto 15px;
+  }
+
+  .project111-text {
+    max-width: 90%;
+  }
+
+  .project111-text h2 {
+    font-size: 32px;
+  }
+
+  .project111-text h3 {
+    font-size: 18px;
+  }
+
+  .project111-text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* 💻 Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .project111-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px;
+  }
+
+  .project111-card {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .project111-card img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .project111-text {
+    max-width: 350px;
+  }
+
+  .project111-text h2 {
+    font-size: 48px;
+  }
+
+  .project111-text h3 {
+    font-size: 20px;
+  }
+
+  .project111-text p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+
+

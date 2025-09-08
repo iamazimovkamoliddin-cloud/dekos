@@ -1,0 +1,142 @@
+/* Telefon raqami */
+.telefon {
+  text-align: center;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  color: #0f1216;
+  margin-top: 150px;
+}
+
+.telefon h2 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.telefon p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0 0;
+}
+
+/* Footer asosiy */
+footer {
+  background-color: #0f1216;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Har bir bo‘lim */
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+}
+
+/* Kontakt manzili */
+.footer-section address {
+  font-style: normal;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+/* Ijtimoiy tarmoqlar */
+.social-links {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+.social-links li {
+  list-style: none;
+}
+
+.social-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+/* Pastki qism */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+.footer-bottom a {
+  color: #bbb;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* Responsivlik */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
