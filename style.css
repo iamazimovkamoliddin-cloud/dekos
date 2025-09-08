@@ -11,7 +11,7 @@ body {
   align-items: center;
   overflow: hidden;
   background-color: #0d1015;
-  padding-left: 70px;
+  padding-left: 40px;
 }
 
 .navbar img{
@@ -98,7 +98,7 @@ body {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
     .navbar .logo{
         width: 90px;
@@ -116,6 +116,11 @@ body {
         font-size: 14px;
     }
 
+     .navbar {
+    padding-left: 20px;
+}
+
+
     .profile{
         right: 0%;
     }
@@ -123,7 +128,16 @@ body {
     .profile img{
         width: 25px;
         height: 25px;
+        margin-right: 15px;
 }
+
+   .profile p{
+        font-size: 14px;
+}
+
+
+
+
 
 }
 
@@ -280,13 +294,6 @@ body {
           font-size: 12px;
     }
 
-    .navbar {
-    padding-left: 40px;
-}
-
-    .profile img{
-    margin-right: 10px;
-}
 
 }
 
@@ -382,6 +389,7 @@ body {
       overflow-y: hidden;
       cursor: grab;
       background: #fff;
+      margin-top: -10px;
       scrollbar-width: none; /* Firefox */
     }
 

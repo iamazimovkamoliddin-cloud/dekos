@@ -11,16 +11,14 @@
 .dropdownMia {
   flex: 1 1 calc(20% - 20px); /* 5 blok = 100% / 5 = 20% minus gap */
   max-width: 250px; /* maksimal kenglik */
-  min-width: 150px; /* minimal kenglik */
+  min-width: 220px; /* minimal kenglik */
   position: relative;
   transition: box-shadow 0.3s ease;
   font-size: 14px;
-
 }
 
 /* Linklar va button */
 .dropbtnMia, .dropbtnMia a, .dropdown-contentMia a {
-  background: #ffffff;
   color: #555;
   text-decoration: none;
   display: block;
@@ -29,18 +27,16 @@
 }
 
 
+
 .dropbtnMia {
   cursor: pointer;
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-
 }
 
 .dropbtnMia a {
   padding: 5px 36px;
-  border-radius: 10px;
 }
 
 .dropbtnMia:hover {
@@ -54,8 +50,9 @@
   left: 0;
   width: 100%;
   z-index: 1;
-  background: #ffffff;
+  background: #f2f2f2;
   padding-bottom: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .dropdown-contentMia a {
@@ -65,18 +62,18 @@
 /* Hover qilganda dropdown ochiladi */
 .dropdownMia:hover .dropdown-contentMia {
   display: block;
-  border-radius: 10px;
 }
 
 .dropdownMia:hover .dropbtnMia {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 
 /* Icon va title */
 .category-iconMia {
-  font-size: 24px;
+  font-size: 44px;
   color: #ff4d4f;
   padding: 20px 36px 26px;
   transition: color 0.3s;
@@ -95,4 +92,41 @@
 .dropdownMia:hover .category-titleMia,
 .dropdownMia a:hover {
   color: #ff4d4f;
+}
+
+@media screen and (max-width: 800px) {
+
+    .dropbtnMia a{
+          display: none;
+    }
+    
+    .dropbtnMia {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction:inherit;
+    align-items: center;
+    justify-content:left;
+    
+    }
+
+    .category-titleMia {
+   position: absolute;
+   left: 15%;
+    }
+
+    .dropdown-contentMia a{
+        display: none;
+    }
+
+    .dropdownMia{
+        width: 100px;
+    }
+
+    .category-iconMia {
+     padding: 0px;
+     font-size: 34px;
+     margin-left: -10px;
+}
 }
